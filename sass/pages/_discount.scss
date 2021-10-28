@@ -1,0 +1,44 @@
+.discount {
+    &__container {
+        background: var(--container-color);
+        border-radius: 1rem;
+        padding: 2.5rem 0 1.5rem;
+        row-gap: .75rem;
+
+        @media screen and (min-width: 767px) {
+            grid-template-columns: repeat(2, max-content);
+            justify-content: center;
+            align-items: center;
+            column-gap: 3rem;
+            padding: 3rem 0;
+            border-radius: 3rem;
+        }
+
+        @media screen and (min-width: 992px) {
+            column-gap: 7rem;
+        }
+    }
+
+    &__data {
+        text-align: center;
+
+        @media screen and (min-width: 767px) {
+            padding-right: 6rem;
+        }
+    }
+
+    &__title {
+        font-size: var(--h2-font-size);
+        margin-bottom: var(--mb-2);
+    }
+
+    &__img {
+        width: 200px;
+        justify-self: center;
+
+        @media screen and (min-width: 767px) {
+            width: 350px;
+            order: -1;
+        }
+    }
+}

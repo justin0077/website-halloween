@@ -1,0 +1,94 @@
+.trick {
+    &__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding-top: 1rem;
+
+        @media screen and (max-width: 320px) {
+            grid-template-columns: .8fr;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 767px) {
+            grid-template-columns: repeat(3, 200px);
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        @media screen and (min-width: 992px) {
+            gap: 3.5rem;
+        }
+    }
+
+    &__content {
+        position: relative;
+        background: var(--container-color);
+        border-radius: 1rem;
+        padding: 1.5rem 0 1rem 0;
+        text-align: center;
+        overflow: hidden;
+
+        @media screen and (min-width: 992px) {
+            border-radius: 1.5rem;
+        }
+
+        &:hover {
+            .trick {
+                &__img {
+                    transform: translateY(-.5rem);
+                }
+
+                &__button {
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 90px;
+        transition: .3s;
+
+        @media screen and (min-width: 992px) {
+            width: 110px;
+        }
+    }
+
+    .trick {
+    &__title {
+            @media screen and (min-width: 992px) {
+                font-size: var(--h3-font-size);
+            }
+        }
+    }
+
+    &__subtitle,&__price {
+        display: block;
+    }
+
+    &__subtitle {
+        font-size: var(--smaller-font-size);
+        margin-bottom: var(--mb-0-5);
+    }
+
+    &__title,&__price {
+        color: var(--title-color);
+        font-weight: var(--font-medium);
+        font-size: var(--normal-font-size);
+    }
+
+    &__button {
+        display: inline-flex;
+        padding: .5rem;
+        border-radius: .25rem .25rem .75rem .25rem;
+        position: absolute;
+        right: -3rem;;
+        bottom: 0;
+    }
+
+    &__icon {
+        font-size: 1.25rem;
+        color: var(--title-color);
+    }
+
+}
